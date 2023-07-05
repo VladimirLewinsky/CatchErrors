@@ -42,7 +42,10 @@ public class main {
         if (Human.birthday.length() < 10) {
             throw new DateLengthException();
         }
-        if (Human.gender != "M" || Human.gender != "G") {
+        if (!(Human.gender.equals("M") || Human.gender.equals("F"))) {
+            throw new GendException();
+        }
+         {
             throw new GendException();
         }
         ArrayList<String> array = new ArrayList();
